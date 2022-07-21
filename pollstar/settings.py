@@ -77,13 +77,12 @@ WSGI_APPLICATION = 'pollstar.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-   'default': {
+     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'OJ',
         'USER': 'postgres',
         'PASSWORD': '9975417954',
        
-        
     }
 }
 
