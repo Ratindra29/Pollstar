@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cl!mzx5jz7!ng#ik+ffeu*i2l_s^$1#f9@$=nnfd*p$ny_tos-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,12 +79,17 @@ WSGI_APPLICATION = 'pollstar.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'OJ',
-        'USER': 'postgres',
-        'PASSWORD': '9975417954',
+        'NAME': 'dcff857j8g0pud',
+        'USER': 'pwuydkeyxoimdv',
+        'PASSWORD': 'b448beeaadae20ed41e7c54d087cda230a2d612027d41f610e6a2b53a2eb56e2',
+        'HOST': 'ec2-100-26-39-41.compute-1.amazonaws.com',
        
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
